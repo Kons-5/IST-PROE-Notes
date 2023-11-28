@@ -1,0 +1,218 @@
+\clearpage
+%//==============================--@--==============================//%
+\begin{myframe}
+    \vspace{-0.75em}
+    $$
+        \begin{aligned}
+            \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t},
+            \quad
+            \;\nabla \times \mathbf{H} = \mathbf{J}_{\text{ext}} + \sigma \mathbf{E} + \dfrac{\partial \mathbf{D}}{\partial t}
+            \\
+            \nabla \times \mathbf{\underline{E}} &= -j\omega\mathbf{\underline{B}},
+            \quad
+            \nabla \times \mathbf{\underline{H}} = \mathbf{\underline{J}}_{\text{ext}} + j\omega \epsilon_{\text{ef}}(\omega) \mathbf{\underline{E}}
+        \end{aligned}
+    $$
+    
+    $$
+        \epsilon_{\text{ef}}(\omega) = \epsilon_{\text{d}}(\omega) + \frac{\sigma_c(\omega)}{j\omega} 
+        = \epsilon'_{\text{ef}}(\omega) - j\epsilon''_{\text{ef}}(\omega)
+    $$
+    $$
+        \tan \theta_{\text{loss}} = \frac{\epsilon''_{\text{ef}}(\omega)}{\epsilon'_{\text{ef}}(\omega)}
+        = \frac{\omega \epsilon''_{\text{d}}(\omega) + \sigma_c(\omega)}{\omega \epsilon'_{\text{d}}(\omega)}
+        \cong \frac{\sigma}{\omega \epsilon_r \epsilon_0}
+    $$
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    $$
+         \mathbf{E}(\mathbf{r}, t) = \Re\left\{\underline{\mathbf{E}}(\mathbf{r}) e^{j\omega t}\right\}
+    $$
+    \hrule
+    $$
+        \lambda = \frac{2\pi}{k} = \frac{c}{f},
+        \quad
+        c = \frac{1}{\sqrt{\mu \epsilon}},
+        \quad
+        \frac{T}{\lambda} = \frac{2\pi}{\omega} = \frac{2\pi}{k}\,\frac{n}{c} = \lambda \, \frac{n}{c}
+    $$
+    $$
+        \mathbf{J}_{\text{\text{ext}}} = 0 \implies \mathbf{H} = -\frac{1}{\eta}\mathbf{\hat{d}} \times \mathbf{E}, \quad \mathbf{E} = \eta\mathbf{H} \times \mathbf{\hat{d}}
+    $$
+    $$
+        \eta = \frac{\norm{\mathbf{E}}}{\norm{\mathbf{H}}} = \sqrt{\frac{\mu}{\epsilon}},
+        \quad
+        k = \frac{2\pi}{\lambda} = \frac{\omega}{c} = \omega \sqrt{\mu \epsilon}
+    $$
+    \hrule\vskip 2mm
+    $$
+        \gamma = jk = \alpha + j\beta,
+        \quad
+        \delta_{\text{skin}} = \frac{1}{\alpha}
+    $$
+    $$
+        \lambda = \frac{2\pi}{\beta} = \frac{c}{f}
+    $$
+    $$
+        \mathbf{\underline{J}}_{\text{\text{ext}}} = 0 \implies \mathbf{\underline{H}} = -\frac{1}{\eta}\mathbf{\hat{d}} \times \mathbf{\underline{E}}, \quad \mathbf{\underline{E}} = \eta\mathbf{\underline{H}} \times \mathbf{\hat{d}},
+    $$
+    $$
+        \eta = \sqrt{\frac{\mu(\omega)}{\epsilon_{\text{ef}}(\omega)}}, 
+        \quad
+        k = \omega \sqrt{\mu(\omega)\epsilon_{\text{ef}}(\omega)}
+    $$
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    \vspace{-1em}
+    $$
+        \epsilon_{0} \approx 8.854 \cdot 10^{-12} \; [\text{F/m}]
+        \qquad
+        \mu_{0} \approx 4\pi \cdot 10^{-7} \; [\text{H/m}]
+    $$
+    $$
+        c_0 = \frac{1}{\sqrt{\epsilon_{0} \mu_{0}}} = 3 \cdot 10^8 \; [\text{m/s}], 
+        \quad
+        \eta_0 = \sqrt{\frac{\mu_{0}}{\epsilon_{0}}} \approx 120\pi\; [\Omega]
+    $$
+    $$
+        c = \dfrac{c_0}{n}, \quad\eta = \dfrac{\eta_0}{n}, \quad\lambda = \dfrac{\lambda_0}{n}, \quad k = nk_0
+    $$
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    $$
+        \epsilon_{\text{ef}}(\omega) \cong \epsilon + \frac{\sigma}{j\omega},
+        \quad
+        \epsilon = \epsilon_r \epsilon_0;
+        \quad
+        \mu(\omega) \cong \mu
+    $$
+    $$
+        \begin{aligned}
+                \gamma &= j\omega\sqrt{\mu\left(\epsilon + \frac{\sigma}{j\omega}\right)} = j\omega\sqrt{\mu\epsilon}\sqrt{1+\frac{\sigma}{j\omega\epsilon}}\\
+                \eta &= \sqrt{\frac{\mu}{\epsilon + \frac{\sigma}{j\omega}}} = \sqrt{\frac{\mu}{\epsilon}}\frac{1}{\sqrt{1+\frac{\sigma}{j\omega\epsilon}}}
+        \end{aligned}
+    $$
+    \begin{itemize}[leftmargin=*,align=left,noitemsep]
+        \item $\sigma = 0$:
+    
+        \vspace{-1em}
+        $$
+            \gamma = j\omega\sqrt{\mu\epsilon}\quad
+            \eta = \sqrt{\frac{\mu}{\epsilon}} = \eta_0\sqrt{\frac{\mu_r}{\epsilon_r}}
+        $$
+        \item $\sigma \ne 0$, $\sigma/\omega\epsilon \ll 1$:
+        $$
+            \gamma_{\text{g.d.}} \approx \dfrac{\sigma}{2}\sqrt{\frac{\mu}{\epsilon}} + j\frac{\omega}{c_0}\sqrt{\mu_r\epsilon_r}\quad
+            \eta_{\text{g.d.}} \approx \sqrt{\frac{\mu}{\epsilon}}\left(1+j\frac{\sigma}{2\omega\epsilon}\right)
+        $$
+        \item $\sigma \ne 0$, $\sigma/\omega\epsilon \gg 1$:
+        $$
+            \gamma_{\text{g.c.}} \approx\sqrt{\frac{\sigma\omega\mu}{2}}(1+j)\quad
+            \eta_{\text{g.c.}} \approx \sqrt{\frac{\omega\mu}{2\sigma}}(1+j)
+        $$
+    \end{itemize}
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    \vspace{1mm}
+    $$
+        \mathbf{\Hat{d}} = \mathbf{\Hat{u}_1} \times \mathbf{\Hat{u}_2}\;\rightarrow\; \frac{\mathbf{\underline{E}_2}}{\mathbf{\underline{E}_1}} = \abs{p} e^{j\phi}
+    $$
+    \begin{itemize}[leftmargin=*,align=left]
+        \item[$\ovoid$] $\phi = \pm \pi/2$ e $\abs{p} = 1$
+        \item[$\rightarrow$] $\phi = 0$, $\phi = \pi$, $\abs{p} = 0$, $\abs{p} = \infty$
+        \item[$\circlearrowleft$] $0 < \phi < \pi$
+        \item[$\circlearrowright$] $-\pi < \phi < 0$
+    \end{itemize}
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    $$
+        \mathbf{S} = \mathbf{E} \times \mathbf{H} \quad [\text{W/m}^2]
+    $$
+    $$
+        P_{\Sigma} = \int_{\Sigma} \mathbf{S} \cdot \mathbf{\hat{n}} \, dA \overset{\underset{\mathrm{\mathbf{\Hat{d}} = \mathbf{\Hat{n}}}}{}}{=} \norm{\mathbf{S}} \cdot A
+    $$
+    $$
+         \mathbf{S}_\text{av} = \frac{1}{2} \Re \left\{ \frac{1}{\eta} \right\}\norm{\mathbf{\underline{E}}}^2 \mathbf{\hat{d}} = \frac{1}{2} \Re \left\{\eta\right\} \norm{\mathbf{\underline{H}}}^2\mathbf{\hat{d}}
+    $$
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    $$
+        \mathbf{\underline{E}}^{\text{ref}} = \rho \mathbf{\underline{E}}^{\text{inc}}
+        \qquad
+        \mathbf{\underline{E}}^{\text{tx}} = \tau \mathbf{\underline{E}}^{\text{inc}}
+    $$
+    $$
+        \rho = \frac{\eta_2 - \eta_1}{\eta_1 + \eta_2}
+        \qquad\quad
+        \tau = 1 + \rho = \frac{2\eta_2}{\eta_1 + \eta_2}
+    $$
+    \hrule\vskip 2mm
+    $$
+        \mathbf{\hat{u}}^{l}_{\parallel} \times \mathbf{\hat{u}}_{\perp} = \mathbf{\hat{d}}^{l}, \quad
+        l = i, r, t
+    $$
+    $$
+    \boxed{%
+        \begin{aligned}
+            \mathbf{\underline{E}}^{\text{inc}} &= \left( \underline{E}_{0\parallel}^i \mathbf{\hat{u}}_{\parallel} + \underline{E}_{0\perp}^i \mathbf{\hat{u}}_{\perp} \right) e^{-\gamma_1 \mathbf{\hat{d}}^i \cdot \mathbf{r}}, \\
+            \mathbf{\underline{E}}^{\text{ref}} &= \left( \rho_{\parallel}\, \underline{E}_{0\parallel}^i \mathbf{\hat{u}}^{r}_{\parallel} + \rho_{\perp}\, \underline{E}_{0\perp}^i \mathbf{\hat{u}}_{\perp} \right) e^{-\gamma_1 \mathbf{\hat{d}}^r \cdot \mathbf{r}}, \\
+            \mathbf{\underline{E}}^{\text{tx}} &= \left( \tau_{\parallel}\, \underline{E}_{0\parallel}^i \mathbf{\hat{u}}^{t}_{\parallel} + \tau_{\perp}\, \underline{E}_{0\perp}^i \mathbf{\hat{u}}_{\perp} \right) e^{-\gamma_2 \mathbf{\hat{d}}^t \cdot \mathbf{r}}.
+        \end{aligned}
+    }
+    $$
+    $$
+    \begin{aligned}
+        \rho_{\parallel} &= \frac{\eta_1 \cos \theta_i - \eta_2 \cos \theta_t}{\eta_1 \cos \theta_i + \eta_2 \cos \theta_t},
+        \qquad
+        \tau_{\parallel} = \frac{\eta_2}{\eta_1} (1 + \rho_{\parallel})\\
+        \rho_{\perp} &= \frac{\eta_2 \cos \theta_i - \eta_1 \cos \theta_t}{\eta_2 \cos \theta_i + \eta_1 \cos \theta_t},\qquad
+        \tau_{\perp} = 1 + \rho_{\perp}
+    \end{aligned}
+    $$
+
+    \hrule\vskip 2mm
+    $$
+        \theta_i = \theta_r
+        \qquad
+        n_1 \sin \theta_i = n_2 \sin \theta_t
+    $$
+    \hrule\vskip 2mm
+    $$
+        \theta_B = \arctan\left( \frac{n_2}{n_1} \right)\;\rightarrow\;\abs{\rho_{||}} = 0
+    $$
+    $$
+        n_1 \sin \theta_B = n_2 \cos \theta_B
+    $$
+    \hrule\vskip 2mm
+    $$
+        n_1 > n_2,\quad \theta_t = 90^\circ\;\rightarrow\;\theta_c = \arcsin\left( \frac{n_2}{n_1} \right)
+    $$
+\end{myframe}
+%//==============================--@--==============================//%
+\begin{myframe}
+    $$
+        \begin{aligned}
+            \norm{\mathbf{S}^{\text{ref}}_{\text{av}}} 
+            &\overset{\underset{\ovoid}{}}{=} 
+            \norm{\mathbf{S}^{\text{inc}}_{\text{av}}} \left(\frac{\abs{\rho_{\perp}}^2 + \abs{\rho_{\parallel}}^2}{2}\right)
+            \\
+            \norm{\mathbf{S}^{\text{tx}}_{\text{av}}} 
+            &\overset{\underset{\ovoid}{}}{=}  
+            \norm{\mathbf{S}^{\text{inc}}_{\text{av}} }\frac{\eta_1}{\eta_2}\left(\frac{\abs{\tau_{\perp}}^2 + \abs{\tau_{\parallel}}^2}{2}\right)
+        \end{aligned}
+    $$
+    $$
+        \begin{aligned}
+        \% \mathcal{P}_{\text{ref}} &= \frac{\norm{\mathbf{S}^{\text{ref}}_{\text{av}}}}{\norm{\mathbf{S}^{\text{inc}}_{\text{av}}}} \times 100\%
+        \\
+        \% \mathcal{P}_{\text{tx}} &= (100\% - \% \mathcal{P}_{\text{ref}})
+        \end{aligned}
+    $$
+\end{myframe}
+%//==============================--@--==============================//%
