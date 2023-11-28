@@ -1,0 +1,86 @@
+%//==============================--@--==============================//%
+\section*{Guia para a Leitura deste Resumo}
+
+Este resumo foi elaborado para facilitar o estudo e a compreensão dos conceitos fundamentais em \href{https://fenix.tecnico.ulisboa.pt/disciplinas/PROE/2023-2024/1-semestre}{\textit{Propagação e Radiação de Ondas Eletromagnéticas}}. Para aproveitar ao máximo este material, recomenda-se:
+\begin{itemize}
+    \item \textbf{Leitura Sequencial:} Embora cada secção (ou quase todas) seja auto-contida, uma leitura sequencial ajudará a construir uma compreensão progressiva dos conceitos, desde os mais básicos até aos mais complexos.
+
+    \item \textbf{Uso de Recursos Complementares:} Recomenda-se a consulta de livros, artigos e outros materiais adicionais sugeridos nas notas. Estes oferecem perspetivas diferentes e aprofundadas sobre os tópicos abordados.
+
+    \item \textbf{Complemento às Aulas:} É importante ressaltar que este resumo serve como um complemento às aulas e não como um substituto. As aulas proporcionam uma experiência de aprendizagem com oportunidades para discussão e de esclarecimento de dúvidas.
+
+\end{itemize}
+
+Em termos de notação, tudo o que tiver mais do que uma dimensão será representado a negrito (i.e., vetores, matrizes, $\dots$). Vetores unitários (ou versores) são representados a negrito e têm um chapeu em cima (e.g., $\mathbf{\hat{u}}$).
+
+Contribuições e relatos de quaisquer inconsistências ou erros encontrados são bem-vindos através de \textit{issues} no \href{https://github.com/kons-5/IST-PROE-Notes}{{\large \faGithub}}.
+
+%//==============================--@--==============================//%
+\section*{Resultados da Análise de Fourier}
+
+\subsection*{Série de Fourier}
+
+A série de Fourier de uma função periódica $\mathrm{f}(t)$ com período $T$ é uma expansão em termos de funções seno e cosseno que são ortogonais no intervalo \([0, T]\), e é dada por:
+$$
+    \mathrm{f}(t) \equiv \frac{a_0}{2} + \sum_{n=1}^{\infty} \left[ a_n \cos\left(\frac{2\pi n t}{T}\right) + b_n \sin\left(\frac{2\pi n t}{T}\right) \right]
+$$
+onde os coeficientes $a_0$, $a_n$ e $b_n$ são calculados como:
+$$
+    a_0 = \frac{2}{T} \int_{0}^{T} \mathrm{f}(t) \, dt 
+    \quad \text{(valor médio/componente DC)}
+$$
+$$
+    a_n = \frac{2}{T} \int_{0}^{T} \mathrm{f}(t) \cos\left(\frac{2\pi n t}{T}\right) \, dt,
+    \qquad
+    b_n = \frac{2}{T} \int_{0}^{T} \mathrm{f}(t) \sin\left(\frac{2\pi n t}{T}\right) \, dt
+$$
+Estes coeficientes representam a amplitude das frequências no espectro de $\mathrm{f}(t)$.
+
+\subsection*{Transformada de Fourier}
+
+A transformada de Fourier é uma ferramenta matemática fundamental que permite a análise de funções no domínio da frequência.
+$$
+    \begin{aligned}
+        \mathrm{F}(\omega) \equiv \mathcal{F}\{ f(t) \}
+        &\overset{\underset{\mathrm{def}}{}}{=}
+        \int_{-\infty}^{\infty} f(t)\, e^{-j\omega t} \, dt
+        & &\text{(equação de análise)}
+        \\
+        \mathrm{f}(t) \equiv \mathcal{F}^{-1}\{ F(\omega ) \}
+        &\overset{\underset{\mathrm{def}}{}}{=}
+        \int_{-\infty}^{\infty} F(\omega)\, e^{j\omega t} \, \frac{d\omega}{2\pi}
+        & &\text{(equação de síntese)}
+    \end{aligned}
+$$
+
+%//==============================--@--==============================//%
+\section*{Algumas Identidades do Cálculo Vetorial}
+
+$$
+    \begin{aligned}
+        &\nabla \times (\nabla \phi) = 0 
+        & &\qquad \text{Rotacional do gradiente de um campo escalar é zero.}
+        \\
+        &\nabla \cdot (\phi \nabla \psi) = \phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi
+        & &\qquad \text{Divergência do produto escalar por gradiente.}
+        \\
+        &\nabla \cdot (\phi \nabla \psi - \psi \nabla \phi) = \phi \nabla^2 \psi - \psi \nabla^2 \phi
+        & &\qquad \text{Divergência do produto de gradientes escalares.}
+        \\
+        &\nabla \cdot (\phi \mathbf{A}) = (\nabla \phi) \cdot \mathbf{A} + \phi \nabla \cdot \mathbf{A}
+        & &\qquad \text{Divergência do produto de um escalar por um vetor.}
+        \\
+        &\nabla \times (\phi \mathbf{A}) = (\nabla \phi) \times \mathbf{A} + \phi \nabla \times \mathbf{A}
+        & &\qquad \text{Rotacional do produto de um escalar por um vetor.}
+        \\
+        &\nabla \cdot (\nabla \times \mathbf{A}) = 0
+        & &\qquad \text{Divergência do rotacional de um vetor é zero.}
+        \\
+        &\nabla \cdot (\mathbf{A} \times \mathbf{B}) = \mathbf{B} \cdot (\nabla \times \mathbf{A}) - \mathbf{A} \cdot (\nabla \times \mathbf{B})
+        & &\qquad \text{Divergência do produto vetorial.}
+        \\
+        &\nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) - \nabla^2 \mathbf{A}
+        & &\qquad \text{Rotacional do rotacional de um vetor.}
+    \end{aligned}
+$$
+%//==============================--@--==============================//%

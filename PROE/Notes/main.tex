@@ -1,0 +1,58 @@
+%//==============================--@--==============================//%
+\documentclass{kons-5}
+\usepackage{extra-math-utils}
+\usepackage{customtitlepage}
+\usepackage{customboxes}
+\usepackage{duckuments}
+
+%------------------------------TITLE PAGE-----------------------------%
+\title{%
+    Apontamentos PROE \\ 
+    \large (Alguns tópicos \href{https://github.com/Kons-5}{\large \faGithub})
+}
+\department{Engenharia Eletrotécnica e de Computadores}
+\exam{Propagação e Radiação de Ondas Eletromagnéticas}
+
+\universitylogo{img/title-page/IST.pdf}
+\titleimage{img/title-page/Magnetic-discussion}
+%\titleimagecaption{Sistema Multiple Input Multiple Output (MIMO)}
+
+%% Add Authors here
+\addauthor{João Gonçalves}{99995}{jrazevedogoncalves@tecnico.ulisboa.pt}
+\addauthor{Teresa Nogueira}{100029}{maria.teresa.ramos.nogueira@tecnico.ulisboa.pt}
+
+\date{Novembro 2023}
+%---------------------------------------------------------------------%
+
+\renewcommand{\epsilon}{\varepsilon}
+% \captionsetup{belowskip=-1.25em}
+
+\begin{document}
+    %% title page
+    \maketitle
+
+    % preface
+    \input{src/preface}
+
+    %% table of contents
+    \customtoc
+    
+    %% body
+    \pagestyle{custom}
+    
+    \chapter{Conceitos Fundamentais}{img/1/Chapter-1-img}
+        \input{src/1/1-Maxwell}
+        \input{src/1/2-Ondas}
+        \input{src/1/3-Energia}
+        \input{src/1/4-Reflection-Refraction}
+
+    % \chapter{Propagação Guiada}{example-image-duck}
+
+    % \chapter{Radiação}{example-image-duck}
+
+    %% bibliography
+    \clearpage
+    \bibliographystyle{unsrtnat} \nocite{*}
+    \bibliography{refs}
+\end{document}%
+%//==============================--@--==============================//%
