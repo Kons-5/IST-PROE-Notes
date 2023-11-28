@@ -5,14 +5,11 @@ This repository contains `PROE.pdf`, a comprehensive PDF that encompasses the en
 ## Key Contents
 
 - **Fundamentals of Electromagnetic Waves**: In-depth exploration of plane waves in boundless media, dielectric and conductor characterization, and wave polarization.
-  
 - **Guided Wave Propagation and Transmission Lines**:
   - Analysis of high-frequency transmission line effects and impedance matching using the Smith chart.
   - Detailed examination of microstrip lines, as well as lossless and lossy lines.
-
 - **Optical Fibers**:
   - Discussion on single and multimode fibers, focusing on modes, dispersion, attenuation, and information capacity.
-
 - **Antenna Fundamentals**:
   - Investigation of elemental antennas, parameters, arrays, and the application of image theory and mutual coupling in antenna design.
 
