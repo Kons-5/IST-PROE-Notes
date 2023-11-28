@@ -1,6 +1,6 @@
 # PROE - Propagation and Radiation of Electromagnetic Waves
 
-This repository contains `PROE.pdf`, a comprehensive PDF that encompasses the entire content discussed in the Propagation and Radiation of Electromagnetic Waves class.
+This repository contains `PROE.pdf`, a comprehensive PDF that encompasses the entire content discussed in the Propagation and Radiation of Electromagnetic Waves class, and according cheatsheets.
 
 ## Key Contents
 
@@ -27,4 +27,3 @@ This work is shared under the [Creative Commons Attribution Non Commercial Share
 ## Contributing
 
 Contributions to this repository are welcome. If you find any discrepancies or have suggestions for content enhancement, please open an issue or submit a pull request.
-
