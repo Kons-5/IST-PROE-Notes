@@ -9,8 +9,8 @@ This repository contains `PROE.pdf`, a comprehensive PDF that encompasses the en
   - Analysis of high-frequency transmission line effects and impedance matching using the Smith chart.
   - Detailed examination of lossless and lossy lines.
   - Matching networks (quarter-wave transformer, stub...).
-- **Optical Fibers**:
-  - Discussion on single and multimode fibers, focusing on modes, dispersion, attenuation, and information capacity.
+- ~**Optical Fibers**~:
+  - ~Discussion on single and multimode fibers, focusing on modes, dispersion, attenuation, and information capacity.~
 - **Antenna Fundamentals**:
   - Investigation of elemental antennas, parameters, arrays, and the application of image theory and mutual coupling in antenna design.
 
